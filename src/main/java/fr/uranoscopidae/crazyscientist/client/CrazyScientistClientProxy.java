@@ -1,5 +1,6 @@
 package fr.uranoscopidae.crazyscientist.client;
 
+import fr.uranoscopidae.crazyscientist.CrazyScientist;
 import fr.uranoscopidae.crazyscientist.CrazyScientistCommonProxy;
 import fr.uranoscopidae.crazyscientist.client.renders.RenderCrazyScientistVillager;
 import fr.uranoscopidae.crazyscientist.common.entities.EntityCrazyScientistVillager;
@@ -21,6 +22,8 @@ public class CrazyScientistClientProxy extends CrazyScientistCommonProxy
     public void preInit(File configFile)
     {
         super.preInit(configFile);
+        MinecraftForge.EVENT_BUS.register(this);
+        RenderingRegistry.registerEntityRenderingHandler(EntityCrazyScientistVillager.class, RenderCrazyScientistVillager::new);
     }
 
     @Override
@@ -32,8 +35,7 @@ public class CrazyScientistClientProxy extends CrazyScientistCommonProxy
     @SubscribeEvent
     public void registerModels(ModelRegistryEvent event)
     {
-        MinecraftForge.EVENT_BUS.register(this);
-        RenderingRegistry.registerEntityRenderingHandler(EntityCrazyScientistVillager.class, RenderCrazyScientistVillager::new);
+        registerBlockModel(CrazyScientist.MUTANT_MACHINE_BRICKS);
     }
 
     private void registerBlockModel(Block block)

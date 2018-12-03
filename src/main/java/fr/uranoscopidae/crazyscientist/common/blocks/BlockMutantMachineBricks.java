@@ -11,6 +11,7 @@ public class BlockMutantMachineBricks extends Block
     public BlockMutantMachineBricks()
     {
         super(Material.IRON);
+        this.setCreativeTab(CrazyScientist.TAB);
         setRegistryName(new ResourceLocation(CrazyScientist.MODID, "mutant_machine_bricks"));
         setUnlocalizedName("mutant_machine_bricks");
     }
