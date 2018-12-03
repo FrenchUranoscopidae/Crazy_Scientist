@@ -5,6 +5,7 @@ import fr.uranoscopidae.crazyscientist.common.entities.EntityCrazyScientistVilla
 import net.minecraft.block.Block;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -16,11 +17,15 @@ public class RegistryHandler
     @SubscribeEvent
     public void registerBlocks(RegistryEvent.Register<Block> event)
     {
+        event.getRegistry().registerAll(CrazyScientist.MUTANT_MACHINE_BRICKS);
     }
 
     @SubscribeEvent
     public void registerItems(RegistryEvent.Register<Item> event)
     {
+        ItemBlock mutantMachineBricksItem = new ItemBlock(CrazyScientist.MUTANT_MACHINE_BRICKS);
+        mutantMachineBricksItem.setRegistryName(CrazyScientist.MUTANT_MACHINE_BRICKS.getRegistryName());
+        event.getRegistry().registerAll(mutantMachineBricksItem);
     }
 
     @SubscribeEvent

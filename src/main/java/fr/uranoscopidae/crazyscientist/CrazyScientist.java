@@ -1,6 +1,10 @@
 package fr.uranoscopidae.crazyscientist;
 
 import fr.uranoscopidae.crazyscientist.common.RegistryHandler;
+import fr.uranoscopidae.crazyscientist.common.blocks.BlockMutantMachineBricks;
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -22,6 +26,17 @@ public class CrazyScientist
     public static CrazyScientistCommonProxy proxy;
 
     private static Logger logger;
+
+    public static final CreativeTabs TAB = new CreativeTabs(MODID)
+    {
+        @Override
+        public ItemStack getTabIconItem()
+        {
+            return new ItemStack(MUTANT_MACHINE_BRICKS);
+        }
+    };
+
+    public static final Block MUTANT_MACHINE_BRICKS = new BlockMutantMachineBricks();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
