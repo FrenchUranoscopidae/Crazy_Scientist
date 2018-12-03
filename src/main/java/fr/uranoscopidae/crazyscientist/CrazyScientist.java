@@ -18,7 +18,7 @@ public class CrazyScientist
 
     @Mod.Instance(CrazyScientist.MODID)
     public static CrazyScientist instance;
-    @SidedProxy(clientSide = "fr.uranoscopidae.hatedmobs.client.MosquitoClientProxy", serverSide = "fr.uranoscopidae.hatedmobs.server.MosquitoServerProxy")
+    @SidedProxy(clientSide = "fr.uranoscopidae.crazyscientist.client.CrazyScientistClientProxy", serverSide = "fr.uranoscopidae.crazyscientist.server.CrazyScientistServerProxy")
     public static CrazyScientistCommonProxy proxy;
 
     private static Logger logger;
