@@ -33,8 +33,8 @@ public class RegistryHandler
     {
         EntityEntry crazyScientistVillagerEntry = EntityEntryBuilder.<EntityCrazyScientistVillager>create()
                 .entity(EntityCrazyScientistVillager.class)
-                .id(new ResourceLocation(CrazyScientist.MODID, "crazyscientistvillager"), 0)
-                .name("crazyscientist.crazyscientistvillager")
+                .id(new ResourceLocation(CrazyScientist.MODID, "crazy_scientist_villager"), 0)
+                .name("crazyscientist.crazy_scientist_villager")
                 .tracker(64, 3, true)
                 .factory(EntityCrazyScientistVillager::new)
                 .egg(0, 0)
