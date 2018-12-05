@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures":
+  {
+    "all": "crazyscientist:blocks/mutant_machine_bricks"
+  }
+}
